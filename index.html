@@ -38,7 +38,12 @@
      <script>
 
      const apiKey = "008d8cc4ffb0cd13b2cedff68d1dccef";
-     const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
+     const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=berlin";
+
+     async function checkWeather() {
+           const response = await fetch(apiUrl + `&appid=${apiKey}`)
+           var data = await response.json();
+     }
 
      </script>
 </body>
